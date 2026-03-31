@@ -1,0 +1,43 @@
+
+body{
+    box-sizing: border-box;
+    height: 100%;
+    background-color: lightgray
+}
+header{
+height: auto;
+background-color: lightgray;
+width: auto;
+margin: 3px;
+padding: 3px;
+text-align: center;
+border: 2px solid black ;
+ box-sizing: border-box;
+}
+
+main{
+    height: auto;
+    background-color: lightgray;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+footer{
+    height: auto;
+    background-color: lightgray;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+
+}
+#icon{
+    margin: 0;
+    padding: 10px;
+    
+}   
