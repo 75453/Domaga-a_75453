@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- MOTYW -->
+    <link id="theme" rel="stylesheet" href="Red.css">
+    
+    <title>CV Dawid Domagała 75453</title>
+</head>
+<body>
+
+<header>
+    <h1>Dawid Domagała - Życiorys zawodowy</h1>
+</header>
+
+
+<div style="text-align:center; margin:10px;">
+    <button onclick="changeTheme()">Zmień motyw</button>
+    <button onclick="toggleSection()">Pokaż / Ukryj Projekty</button>
+</div>
+
+<main>
+
+<section id="icon">
+    <img src="Profiloew.jpg" alt="Zdjęcie profilowe" style="border: 3px solid black;">
+</section>
+
+<section id="Kontakt">
+    <h2>Kontakt</h2>
+    <p>Telefon: <a href="tel:+48 123 456 789">+48 123 456 789</a></p>
+    <p>Email: <a href="mailto:ddomaga2@stu.vistula.edu.pl">ddomaga2@stu.vistula.edu.pl</a></p>
+    <p>Miasto: Warszawa</p>
+
+    <h2>Linki</h2>
+    <p>
+        <a href="https://www.youtube.com/@dawid3601" target="_blank">YouTube</a> ---
+        <a href="https://github.com/75453" target="_blank">GitHub</a>
+    </p>
+</section>
+
+<section id="Umiejętności">
+    <h2>Umiejętności</h2>
+    <ul id="skillsList"></ul>
+</section>
+
+<section id="Projekty">
+    <h2>Projekty</h2>
+    <ul id="projectsList"></ul>
+</section>
+
+<section id="Doświadczenie">
+    <h2>Doświadczenie</h2>
+    
+    <article>
+        <h3>Technikum ZDZ, Warszawa</h3>
+        <p>2020 - 2025</p>
+    </article>
+    
+    <article>
+        <h3>Praktyki w Chispani</h3>
+        <p>2022</p>
+    </article>
+    
+    <article>
+        <h3>Uniwersytet Vistula, Ursynów</h3>
+        <p>2026 - obecnie</p>
+    </article>
+
+</section>
+<section id="Formularz">
+    <h2>Formularz kontaktowy</h2>
+    <form id="contactForm" action="">
+        <label for="fname">Imię:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br><br>
+        <label for="lname">Nazwisko:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" value=""><br><br>
+        <label for="message">Wiadomość:</label><br>
+        <textarea id="message" style="height: 100px;"></textarea><br><br>
+        <input type="submit" value="Submit">
+        
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Dawid Domagała 75453.</p>
+</footer>
+
+
+<script src="MotywScript.js"></script>
+<script src="WalidacjaScript.js"></script>
+<script src="DataScript.js"></script>
+
+</body>
+</html>
