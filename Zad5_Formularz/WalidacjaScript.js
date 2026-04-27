@@ -14,7 +14,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     }
     else if(!nameRegex.test(fname)){
         errors.push("Imie nie powinno zaiwerać liczb")
-    }s
+    }
     // Nazwisko
     const lnameregex = /^[A-Za-zÀ-ž\s-]+$/;
     if (lname === "") {
