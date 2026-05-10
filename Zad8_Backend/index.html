@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie7_Backend</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        .item { margin-top: 10px; border-bottom: 1px solid #ccc; padding: 5px; display: flex; justify-content: space-between; width: 300px; }
+        button { margin-left: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Storage</h2>
+    
+    <input type="text" id="inputField" placeholder="Prosze wpisz tekst">
+    <button onclick="addItem()">Dodaj</button>
+
+    <div id="listContainer"></div>
+
+    <script>
+        const input = document.getElementById('inputField');
+        const container = document.getElementById('listContainer');
+        let items = JSON.parse(localStorage.getItem('myNotes')) || [];
+
+        function render() {
+            container.innerHTML = '';
+            items.forEach((text, index) => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.innerHTML = `
+                    <span>${text}</span>
+                    <button onclick="removeItem(${index})">Usuń</button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function addItem() {
+            const val = input.value.trim();
+            if (val) {
+                items.push(val);
+                localStorage.setItem('myNotes', JSON.stringify(items));
+                input.value = '';
+                render();
+            }
+        }
+
+        function removeItem(index) {
+            items.splice(index, 1);
+            localStorage.setItem('myNotes', JSON.stringify(items));
+            render();
+        }
+
+        render();
+    </script>
+
+</body>
+</html>
